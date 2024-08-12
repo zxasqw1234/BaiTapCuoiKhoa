@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Dropdown Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdownButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 200px;
+    z-index: 1000;
+}
+
+#dropdownMenu li {
+    padding: 10px;
+}
+
+#dropdownMenu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+#dropdownMenu li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Show the dropdown menu when hovering over the parent div */
+.dropdown:hover #dropdownMenu,
+.dropdown:focus-within #dropdownMenu {
+    display: block;
+}
+
+</style>
+<body>
+    <div class="dropdown">
+        <button id="dropdownButton" aria-haspopup="true" aria-expanded="false"> Pages<i class="fa fa-chevron-down" style="font-size:10px"></i></button>
+        <ul id="dropdownMenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownButton">
+            <li><a href="#home" role="menuitem">Home</a></li>
+            <li><a href="#about" role="menuitem">About</a></li>
+            <li><a href="#services" role="menuitem">Services</a></li>
+            <li><a href="#profile" role="menuitem">profile</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('dropdownButton');
+    const menu = document.getElementById('dropdownMenu');
+
+    button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+        button.setAttribute('aria-expanded', !expanded);
+        menu.style.display = expanded ? 'none' : 'block';
+    });
+
+    // Close the menu when clicking outside of it
+    document.addEventListener('click', (event) => {
+        if (!button.contains(event.target) && !menu.contains(event.target)) {
+            button.setAttribute('aria-expanded', 'false');
+            menu.style.display = 'none';
+        }
+    });
+
+    // Keyboard interaction
+    button.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            button.setAttribute('aria-expanded', 'false');
+            menu.style.display = 'none';
+        }
+    });
+
+    menu.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            button.setAttribute('aria-expanded', 'false');
+            menu.style.display = 'none';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
