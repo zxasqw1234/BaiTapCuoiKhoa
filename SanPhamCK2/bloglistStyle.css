@@ -205,6 +205,11 @@ div.bloglist1-2{
     gap: 49px;
     padding-bottom: 80px;
 }
+div.grid-layout{
+    display: grid;
+    grid-template-columns: min-content min-content;
+    gap: 2rem;
+}
 div.grid-layout div.artikel1{
     position: relative;
     display: flex;
