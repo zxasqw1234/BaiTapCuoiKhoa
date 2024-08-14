@@ -47,7 +47,7 @@ ul.navBar li a:hover{
     color: #FF782D;
     background-color: #F5F5F5;
 }
-#dropdownbutton:hover{
+#dropdownButton:hover{
     color: #FF782D;
     background-color: #F5F5F5;
 }
@@ -144,7 +144,7 @@ div.search:hover{
     border-color: #ff782d;
 }
 /* ================== */
-div.bloglist{
+div.home-path{
     background-color: #F5F5F5;
     padding: 1.5rem;
     padding-left: 18rem;
@@ -152,20 +152,60 @@ div.bloglist{
     justify-content: flex-start;
     align-items: center;
     margin-top: 1.6rem;
+    gap: 1rem;
 }
-div.bloglist a,i{
+div.home-path a{
+    text-decoration: none;
+}
+div.home-path a,i{
     color: #000000;
     font-size: 1.125rem;
 
 }
 /* ============== */
-/* div.bloglist1{
+div.bloglist1-1{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 18rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+}
+div.bloglist1-1 p{
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+div.bloglist1-1 span{
+    color: #7b7b7b;
+    font-size: 1.12rem;
+    font-weight: 500;
+}
+/* togglebutton */
+div.Toggle-button i{
+    width: 40px;
+    background: white;
+    color: #000000;
+    text-align: center;
+    padding: 0.4rem;
+    cursor: pointer;
+    margin-left: 0.4rem;
+}
+div.Toggle-button i:hover{
+    color: #ff782d;
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+}
+div.Toggle-button i.active{
+    color: #ff782d;
+}
+/* Grid layout */
+div.bloglist1-2{
     display: flex;
     justify-content: center;
     gap: 49px;
     padding-bottom: 80px;
-} */
-div.bloglist1 div.artikel1{
+}
+div.grid-layout div.artikel1{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -178,7 +218,7 @@ div.bloglist1 div.artikel1{
     border-style: solid ;
     
 }
-div.artikel1 a{
+div.grid-layout div.artikel1 a{
     color: #000000;
     font-size: 1.25rem;
     font-weight: 600;
@@ -186,7 +226,7 @@ div.artikel1 a{
     text-decoration: none;
     padding: 20px 20px;
 }
-div.artikel1 a:hover{
+div.grid-layout div.artikel1 a:hover{
     color:#ff782d ;
     cursor: pointer;
 }
@@ -195,19 +235,19 @@ div.artikel1:hover{
     box-shadow: 12px 12px 50px rgba(0, 0, 0, 0.4);
     transition: all 0.3s;
 }
-div.artikel1 ul{
+div.grid-layout div.artikel1 ul{
     list-style: none;
     display: flex;
     gap: 10px;
     align-items: center;
     padding-left: 20px;
 }
-div.artikel1 img{
+div.grid-layout div.artikel1 img{
     width:100%;
     height: 50%;
     border-radius: 20px 20px 0px 0px;
 }
-div.artikel1 div.artikelText{
+div.grid-layout div.artikel1 div.artikelText{
     overflow:hidden; 
     white-space:wrap; 
     text-overflow:ellipsis; 
@@ -215,4 +255,51 @@ div.artikel1 div.artikelText{
     padding: 20px 20px;
 
 }
+/* Líst layout */
+div.list-layout .item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 23px;
+    height: 200px;
+    width: 700px;
+    border-width: 1px !important;
+    border: #bbbaba ;
+    border-style: solid ;
+}
+div.list-layout div.item-content ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 20px;
+    list-style: none;
+
+}
+div.list-layout div.item-content a{
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: Exo,sans-serif;
+    text-decoration: none;
+    padding: 20px 20px;
+    white-space: nowrap;
+}
+div.list-layout div.item-content a:hover{
+    color:#ff782d ;
+    cursor: pointer;
+}
+div.list-layout div.item-content div.artikelText{
+    /* overflow:hidden;  */
+    white-space:wrap; 
+    text-overflow:ellipsis; 
+    width:400px;
+    padding: 20px 20px;
+}
+div.list-layout img{
+    width:20%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
 /* ==================== */
+
+
