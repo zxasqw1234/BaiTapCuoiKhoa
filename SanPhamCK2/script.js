@@ -59,3 +59,21 @@ var swiper = new Swiper(".mySwiper", {
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
   }
+
+  function toggleView(e){
+    console.log(e.target)
+    if(e.target.classList.contains('list-layout')){
+        document.querySelector('.Toggle-button').children[0].classList.add('active');
+        document.querySelector('.Toggle-button').children[1].classList.remove('active');
+
+        document.querySelector('#container').classList.add('list-layout');
+        document.querySelector('#container').classList.remove('grid-layout');
+
+    }else if(e.target.classList.contains('grid-layout')){
+        document.querySelector('.Toggle-button').children[0].classList.remove('active');
+        document.querySelector('.Toggle-button').children[1].classList.add('active');
+
+        document.querySelector('#container').classList.add('list-layout');
+        document.querySelector('#container').classList.remove('grid-layout');
+    }
+  }
