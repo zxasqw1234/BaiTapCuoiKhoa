@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    padding: 0px 10px ;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    font-family: sans-serif;
+    
+    
+}
+
+.navBar 
+{
+    display: flex;
+    list-style:none;
+    width: max-content;
+    height: auto;
+    gap: 38px;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration:none;
+    justify-content: space-between;
+    text-align: center;
+    font-family: sans-serif;
+    align-items: center;
+    
+}
+ul.navBar li a{
+    text-decoration:none;
+    font-family: sans-serif;
+    color: #202020;
+    font-weight:600;
+    font-style : normal;
+    font-variant:normal;
+    text-decoration:none solid rgb(255, 120, 45);
+    padding: 40px 10px;
+    align-items: center;
+    border-width: none;
+    }
+ul.navBar li a:hover{
+    color: #FF782D;
+    background-color: #F5F5F5;
+}
+#dropdownButton:hover{
+    color: #FF782D;
+    background-color: #F5F5F5;
+}
+/* ============ */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdownButton {
+    font-family: sans-serif;
+    color: #202020;
+    font-size: 1.12rem;
+    font-weight:600;
+    font-style : normal;
+    font-variant:normal;
+    text-decoration:none solid rgb(255, 120, 45);
+    border-width: none;
+    background-color: white;
+    border: none;
+    width: 90px;
+    height: 80px;
+    /* padding: 20px; */
+    }
+
+
+#dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 200px;
+    z-index: 1000;
+    text-align: left;
+}
+
+
+#dropdownMenu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 1rem !important;
+}
+
+#dropdownMenu li a:hover {
+    background-color: white;
+    color: #FF782D;
+}
+
+/* Show the dropdown menu when hovering over the parent div */
+.dropdown:hover #dropdownMenu,
+.dropdown:focus-within #dropdownMenu {
+    display: block;
+}
+/* ================ */
+div.userInfo{
+    padding: 10px 24px;
+    font-family: sans-serif, sans-serif;
+    font-size: 18px ;
+    font-weight:500;
+    font-style:normal;
+    font-variant:normal;
+    border-style: solid;
+    border-radius: 24px;
+    border-width: 2px;
+    border-color: #7b7b7b;
+    text-align:start;
+    text-indent:0px;
+}
+div.userInfo a {
+    color: #202020;
+    border-radius: 24px;
+    border-width: 2px;
+    border-color: #555555;
+    text-decoration:none solid rgb(255, 120, 45);
+}
+div.userInfo a:hover{
+    color: #FF782D;
+}
+div.search {
+    padding: 6px 7px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+    border-color: #202020;
+    background-color: white;
+    align-items: baseline;
+}
+    
+div.search:hover{
+    color: #ff782d;
+    border-color: #ff782d;
+}
