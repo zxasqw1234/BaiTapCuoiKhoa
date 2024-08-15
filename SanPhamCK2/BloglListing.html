@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogListing</title>
+    <link rel="stylesheet" href="bloglistStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/4ac15adad9.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+</style>
+<body>
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img src="https://edupress.thimpress.com/wp-content/uploads/2024/01/logo-png.png" alt="EduPress - Education WordPress Starter Theme For LearnPress LMS - FREE" data-sticky="https://edupress.thimpress.com/wp-content/uploads/2024/01/logo-png.png">
+            </div>
+            <ul class="navBar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Blog</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button id="dropdownButton" aria-haspopup="true" aria-expanded="false"> Pages<i class="fa fa-chevron-down" style="font-size:10px"></i></button>
+                        <ul id="dropdownMenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownButton">
+                            <li><a href="#home" role="menuitem">About Us</a></li>
+                            <li><a href="#about" role="menuitem">Contact Us</a></li>
+                            <li><a href="#services" role="menuitem">FAQs</a></li>
+                            <li><a href="#profile" role="menuitem">Profile</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#">LearnPress Add-Ons</a></li>
+                <li><a href="#">Premium Themes</a></li>
+            </ul>
+            </nav>
+            <div class="userInfo">
+                <a href="">
+                    Register
+                    /
+                </a>
+                <a href="">Log in</a>
+            </div>
+            <div class = "search" href="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </header>
+    <body>
+        <div class="home-path">
+            <a href="https://edupress.thimpress.com/">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size:10px"></i>
+            <span>Blog</span>
+        </div>
+        <div class="content">
+            <div class="bloglist">
+                <div class="bloglist1-1" >
+                    <p>All Artikel</p>
+                    <div class="sideSearch">
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="Search">
+                            <i class="fa fa-search search-icon"></i>
+                        </div>
+                        <div id="toggle-button" class="Toggle-button">
+                            <i class="fa-solid fa-list " onclick="toggleView(event);"></i>
+                            <i class="fa-solid fa-table-cells-large active" onclick="toggleView(event);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bloglist1-2">
+                    <div id = "container" class="project-container grid-layout">
+                        <div class="artikel1 item">
+                            <img src="./best-learnpress-wordpress-theme-collection-800x488.png" alt="">
+                            <div class="item-content">
+                                <a href="" class="artikelTitle">Best LearnPress WordPress Theme Collection for 2023</a>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><g clip-path="url(#clip0_233_3200)"><path d="M16.6667 3.29997H15.8334V1.6333H14.1667V3.29997H5.83335V1.6333H4.16669V3.29997H3.33335C2.41669 3.29997 1.66669 4.04997 1.66669 4.96663V18.3C1.66669 19.2166 2.41669 19.9666 3.33335 19.9666H16.6667C17.5834 19.9666 18.3334 19.2166 18.3334 18.3V4.96663C18.3334 4.04997 17.5834 3.29997 16.6667 3.29997ZM16.6667 18.3H3.33335V7.46663H16.6667V18.3Z" fill="#FF782D"></path></g><defs><clipPath id="clip0_233_3200"><rect width="20" height="20" fill="white" transform="translate(0 0.799805)"></rect></clipPath></defs></svg></li>
+                                    <li><span>January 30, 2024</span></li>
+                                </ul>
+                                <div class="artikelText">Looking for an amazing & well-functional LearnPress WordPress Theme? Online education has become so popular that there are a lot... </div>
+                            </div>
+                        </div>
+                        <div class="artikel1 item">
+                            <img src="./best-learnpress-wordpress-theme-collection-800x488.png" alt="">
+                            <div class="item-content">
+                                <a href="" class="artikelTitle">Best LearnPress WordPress Theme Collection for 2023</a>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><g clip-path="url(#clip0_233_3200)"><path d="M16.6667 3.29997H15.8334V1.6333H14.1667V3.29997H5.83335V1.6333H4.16669V3.29997H3.33335C2.41669 3.29997 1.66669 4.04997 1.66669 4.96663V18.3C1.66669 19.2166 2.41669 19.9666 3.33335 19.9666H16.6667C17.5834 19.9666 18.3334 19.2166 18.3334 18.3V4.96663C18.3334 4.04997 17.5834 3.29997 16.6667 3.29997ZM16.6667 18.3H3.33335V7.46663H16.6667V18.3Z" fill="#FF782D"></path></g><defs><clipPath id="clip0_233_3200"><rect width="20" height="20" fill="white" transform="translate(0 0.799805)"></rect></clipPath></defs></svg></li>
+                                    <li><span>January 30, 2024</span></li>
+                                </ul>
+                                <div class="artikelText">Looking for an amazing & well-functional LearnPress WordPress Theme? Online education has become so popular that there are a lot... </div>
+                            </div>
+                        </div>
+                        <div class="artikel1 item">
+                            <img src="./best-learnpress-wordpress-theme-collection-800x488.png" alt="">
+                            <div class="item-content">
+                                <a href="" class="artikelTitle">Best LearnPress WordPress Theme Collection for 2023</a>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><g clip-path="url(#clip0_233_3200)"><path d="M16.6667 3.29997H15.8334V1.6333H14.1667V3.29997H5.83335V1.6333H4.16669V3.29997H3.33335C2.41669 3.29997 1.66669 4.04997 1.66669 4.96663V18.3C1.66669 19.2166 2.41669 19.9666 3.33335 19.9666H16.6667C17.5834 19.9666 18.3334 19.2166 18.3334 18.3V4.96663C18.3334 4.04997 17.5834 3.29997 16.6667 3.29997ZM16.6667 18.3H3.33335V7.46663H16.6667V18.3Z" fill="#FF782D"></path></g><defs><clipPath id="clip0_233_3200"><rect width="20" height="20" fill="white" transform="translate(0 0.799805)"></rect></clipPath></defs></svg></li>
+                                    <li><span>January 30, 2024</span></li>
+                                </ul>
+                                <div class="artikelText">Looking for an amazing & well-functional LearnPress WordPress Theme? Online education has become so popular that there are a lot... </div>
+                            </div>
+                        </div>
+                        <div class="artikel1 item">
+                            <img src="./best-learnpress-wordpress-theme-collection-800x488.png" alt="">
+                            <div class="item-content">
+                                <a href="" class="artikelTitle">Best LearnPress WordPress Theme Collection for 2023</a>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><g clip-path="url(#clip0_233_3200)"><path d="M16.6667 3.29997H15.8334V1.6333H14.1667V3.29997H5.83335V1.6333H4.16669V3.29997H3.33335C2.41669 3.29997 1.66669 4.04997 1.66669 4.96663V18.3C1.66669 19.2166 2.41669 19.9666 3.33335 19.9666H16.6667C17.5834 19.9666 18.3334 19.2166 18.3334 18.3V4.96663C18.3334 4.04997 17.5834 3.29997 16.6667 3.29997ZM16.6667 18.3H3.33335V7.46663H16.6667V18.3Z" fill="#FF782D"></path></g><defs><clipPath id="clip0_233_3200"><rect width="20" height="20" fill="white" transform="translate(0 0.799805)"></rect></clipPath></defs></svg></li>
+                                    <li><span>January 30, 2024</span></li>
+                                </ul>
+                                <div class="artikelText">Looking for an amazing & well-functional LearnPress WordPress Theme? Online education has become so popular that there are a lot... </div>
+                            </div>
+                        </div>
+                        <div class="artikel1 item">
+                            <img src="./best-learnpress-wordpress-theme-collection-800x488.png" alt="">
+                            <div class="item-content">
+                                <a href="" class="artikelTitle">Best LearnPress WordPress Theme Collection for 2023</a>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><g clip-path="url(#clip0_233_3200)"><path d="M16.6667 3.29997H15.8334V1.6333H14.1667V3.29997H5.83335V1.6333H4.16669V3.29997H3.33335C2.41669 3.29997 1.66669 4.04997 1.66669 4.96663V18.3C1.66669 19.2166 2.41669 19.9666 3.33335 19.9666H16.6667C17.5834 19.9666 18.3334 19.2166 18.3334 18.3V4.96663C18.3334 4.04997 17.5834 3.29997 16.6667 3.29997ZM16.6667 18.3H3.33335V7.46663H16.6667V18.3Z" fill="#FF782D"></path></g><defs><clipPath id="clip0_233_3200"><rect width="20" height="20" fill="white" transform="translate(0 0.799805)"></rect></clipPath></defs></svg></li>
+                                    <li><span>January 30, 2024</span></li>
+                                </ul>
+                                <div class="artikelText">Looking for an amazing & well-functional LearnPress WordPress Theme? Online education has become so popular that there are a lot... </div>
+                            </div>
+                        </div>
+                        <div class="artikel1 item">
+                            <img src="./best-learnpress-wordpress-theme-collection-800x488.png" alt="">
+                            <div class="item-content">
+                                <a href="" class="artikelTitle">Best LearnPress WordPress Theme Collection for 2023</a>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><g clip-path="url(#clip0_233_3200)"><path d="M16.6667 3.29997H15.8334V1.6333H14.1667V3.29997H5.83335V1.6333H4.16669V3.29997H3.33335C2.41669 3.29997 1.66669 4.04997 1.66669 4.96663V18.3C1.66669 19.2166 2.41669 19.9666 3.33335 19.9666H16.6667C17.5834 19.9666 18.3334 19.2166 18.3334 18.3V4.96663C18.3334 4.04997 17.5834 3.29997 16.6667 3.29997ZM16.6667 18.3H3.33335V7.46663H16.6667V18.3Z" fill="#FF782D"></path></g><defs><clipPath id="clip0_233_3200"><rect width="20" height="20" fill="white" transform="translate(0 0.799805)"></rect></clipPath></defs></svg></li>
+                                    <li><span>January 30, 2024</span></li>
+                                </ul>
+                                <div class="artikelText">Looking for an amazing & well-functional LearnPress WordPress Theme? Online education has become so popular that there are a lot... </div>
+                            </div>
+                        </div> 
+                    </div>
+                   
+                </div>
+                <div id="pagination">
+                    <button id="prevBtn" onclick="changePage(-1)"><i class="fas fa-chevron-left"></i></button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button id="nextBtn" onclick="changePage(1)"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="courseFilter">
+                <div class="categories">
+                    <h1>Category</h1>
+                    <ul>
+                        <li>
+                            <a href="">Commercial</a>
+                            <p>15</p>
+                        </li>
+                        <li>
+                            <a href="">Office</a>
+                            <p>15</p>
+                        </li>
+                        <li>
+                            <a href="">Shop</a>
+                            <p>15</p>
+                        </li>
+                        <li>
+                            <a href="">Educate</a>
+                            <p>15</p>
+                        </li>
+                        <li>
+                            <a href="">Academy</a>
+                            <p>15</p>
+                        </li>
+                        <li>
+                            <a href="">Single Family home</a>
+                            <p>15</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recentPost">
+                    <h1>Recent Post</h1>
+                    <div class="post">
+                        <img src="./learnpress-shortcodes-800x488.webp" alt="">
+                        <a href="">Best LearnPress WordPress Theme Collection for 2023</a>
+                    </div>
+                    <div class="post">
+                        <img src="./picture1-1-800x488.png" alt="">
+                        <a href="">Best LearnPress WordPress Theme Collection for 2023</a>
+                    </div>
+                    <div class="post">
+                        <img src="./picture2-1-800x488.png" alt="">
+                        <a href="">Best LearnPress WordPress Theme Collection for 2023</a>
+                    </div>
+                </div>
+                <div class="Tags">
+                    <h1>Tags</h1>
+                    <div class="TagContainer">
+                        <br><br>
+                        <a href="">Free courses</a>
+                        <a href="">Marketing</a><br><br><br>
+                        <a href="">Idea</a>
+                        <a href="">LMS</a><br><br><br>
+                        <a href="">Learn Press</a>
+                        <a href="">Instructor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    <div class="site-footer">
+        <div class="footer-logo">
+            <img src="https://edupress.thimpress.com/wp-content/uploads/2024/01/logo-png.png" alt="EduPress - Education WordPress Starter Theme For LearnPress LMS - FREE" data-sticky="https://edupress.thimpress.com/wp-content/uploads/2024/01/logo-png.png">
+            <span>LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online.</span>
+        </div>
+        <div class="Programs">
+            <h2>PROGRAMS</h2>
+            <ul>
+                <li><a href="https://edupress.thimpress.com/#">Art & Design</a></li>
+                <li><a href="https://edupress.thimpress.com/#">Business</a></li>
+                <li><a href="https://edupress.thimpress.com/#">IT & Software</a></li>
+                <li><a href="https://edupress.thimpress.com/#">Languages</a></li>
+                <li><a href="https://edupress.thimpress.com/#">Programming</a></li>
+            </ul>
+        </div>
+        <div class="Help">
+            <h2>GET HELP</h2>
+            <ul>
+                <li><a href="https://edupress.thimpress.com/#">Contact Us</a></li>
+                <li><a href="https://edupress.thimpress.com/#">Latest Articles</a></li>
+                <li><a href="https://edupress.thimpress.com/#">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="Contact">
+            <h2>CONTACT US</h2>
+            <ul class="contactInfo">
+                <li>23 New Design Str, Lorem Ipsum10 Hudson Yards, USA</li>
+                <li><a href="https://edupress.thimpress.com/#">Tel: + (123) 2500-567-8988</a></li>
+                <li><a href="https://edupress.thimpress.com/#">Email: support@lms.com</a></li>
+            </ul>
+            <ul class="socialIcon">
+                <li><a href="https://facebook.com/"><i aria-hidden="true" class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://pinterest.com/"><i aria-hidden="true" class="fab fa-pinterest-p"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="https://instargram.com/"><i aria-hidden="true" class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <footer class="copyRight">
+        <p>Copyright © 2024 LearnPress LMS | Powered by <a href="https://thimpress.com/learnpress/?utm_source=EduPress&amp;utm_medium=HomePage&amp;utm_campaign=Footer" target="_blank" rel="noopener">LearnPress LMS</a></p>
+    </footer>
+    <button onclick="scrollToTop()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+<!-- <script src="script.js"></script> -->
+<script>
+    document.getElementById('toggle-button').addEventListener('click', function() {
+    const container = document.getElementById('container');
+    if (container.classList.contains('list-layout')) {
+        container.classList.remove('list-layout');
+        container.classList.add('grid-layout');
+    } else {
+        container.classList.remove('grid-layout');
+        container.classList.add('list-layout');
+    }
+});
+
+</script>
+</html>
