@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Pagination</title>
+    <style>
+        /* Basic styling for the image grid and pagination */
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-grid img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .pagination li {
+            margin: 0 5px;
+        }
+        .pagination a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            color: #007bff;
+        }
+        .pagination a.active {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-grid" id="image-grid">
+        <!-- Images will be loaded here -->
+    </div>
+    <ul class="pagination" id="pagination">
+        <!-- Pagination controls will be dynamically generated here -->
+    </ul>
+
+    <script >
+        // script.js
+const imageGrid = document.getElementById('image-grid');
+const paginationElement = document.getElementById('pagination');
+
+const pageSize = 6; // Number of images per page
+const totalPages = 10; // Total number of pages (this should match your actual data)
+
+// Dummy image data (Replace with your actual image URLs)
+const images = Array.from({ length: 50 }, (_, i) => `https://via.placeholder.com/150?text=Image+${i + 1}`);
+
+// Function to render images for the given page
+function renderImages(pageNumber) {
+    const start = (pageNumber - 1) * pageSize;
+    const end = start + pageSize;
+    const pageImages = images.slice(start, end);
+    imageGrid.innerHTML = pageImages.map(src => `<img src="${src}" alt="Image">`).join('');
+}
+
+// Function to render pagination controls
+function renderPagination(currentPage) {
+    paginationElement.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#';
+        a.textContent = i;
+        if (i === currentPage) {
+            a.classList.add('active');
+        }
+        a.addEventListener('click', (event) => {
+            event.preventDefault();
+            renderImages(i);
+            renderPagination(i);
+        });
+        li.appendChild(a);
+        paginationElement.appendChild(li);
+    }
+}
+
+// Initial render
+renderImages(1);
+renderPagination(1);
+
+    </script>
+</body>
+</html>
