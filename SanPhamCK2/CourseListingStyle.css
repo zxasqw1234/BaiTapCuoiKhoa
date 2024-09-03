@@ -177,18 +177,18 @@ div.content{
     justify-content: center;
 }
 /* ========== */
-div.bloglist1-1{
+div.courselist1-1{
     display: flex;
     justify-content: space-between;
     margin-top: 1.2rem;
     margin-bottom: 2.9rem;
 }
-div.bloglist1-1 p{
+div.courselist1-1 p{
     color: #000000;
     font-size: 1.5rem;
     font-weight: bold;
 }
-div.bloglist1-1 div.sideSearch span{
+div.courselist1-1 div.sideSearch span{
     color: #7b7b7b;
     font-size: 1.12rem;
     font-weight: 500;
@@ -210,6 +210,8 @@ div.sideSearch{
 /* cousreFilter */
 div.courseFilter{
     padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
 }
 div.categories{
     padding: 20px 0px;
@@ -218,73 +220,94 @@ div.categories{
 div.categories h1{
     font-size: 1.2rem;
     font-weight: 600;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 }
 div.categories ul{
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 div.categories ul li{
     display: flex;
     justify-content: space-between ;
     gap: 20px;
     color: #7b7b7b;
-}
-div.categories ul li a{
-    text-decoration: none;
-    color: #7b7b7b;
-    font-family: sans-serif;
-}
-div.categories ul li a:hover{
-    color: #FF782D;
-}
-div.recentPost img{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 20px 20px ;
-}
-div.recentPost h1{
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-div.post{
-    display: flex;
-    align-items: center;
-    width: 19rem;
-    padding-top: 1rem;
-    border-radius: 20px;
-}
-div.post a:hover{
-    color: #FF782D;
-    cursor: pointer;
-}
-div.post a{
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #000000;
-    padding-left: 1rem;
-    font-family: sans-serif;
-}
-div.Tags{
-    width: 340px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
-div.Tags h1{
-    font-size: 1.2rem;
-    font-weight: 600;
+li.checked label, li.checked p {
+    font-weight: bold;
+    color: #5d5d5d;
 }
-div.Tags a{
-    text-decoration: none;
-    border: #bbbaba solid 1px;
-    border-radius: 10px;
-    padding: 10px 14px;
-    background-color: white;
-    color: #7b7b7b;
+
+
+/* Bold the <p> element inside a .checked <li> */
+.checked p {
+    font-weight: 400;
 }
-div.Tags a:hover{
-    background-color: #F5F5F5;
-    color: #000000;
+
+/* Ensure star icons are not affected by .checked */
+.fa-star {
+    color: #96948f; /* Original star color */
+    font-weight: normal; /* Ensures the star icon's weight isn't affected */
+}
+
+.categories ul li div label .fa-star {
+    margin-right: 5px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.categories ul li div label .fa-star.checked {
+    color: #ffcc00;
+}
+
+/* Custom checkbox styling for "Price" category */
+.categories ul li div input[type="checkbox"] {
+    display: none;
+}
+
+.categories ul li div label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.categories ul li div label:before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: #000000 1px solid;
+}
+
+.categories ul li div input:checked + label:before {
+    background-color: rgb(52, 51, 51);
+}
+
+.categories ul li div label:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.categories ul li div input:checked + label:after {
+    display: block;
+    left: 11.7px;
+    top: 2.5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 /* togglebutton */
 div.Toggle-button{
@@ -310,7 +333,7 @@ div.Toggle-button i.active{
     color: #ff782d;
 }
 /* Grid layout */
-div.bloglist1-2{
+div.courselist1-2{
     display: flex;
     justify-content: center;
     gap: 49px;
@@ -336,20 +359,20 @@ div.grid-layout div.item{
     border-width: 1px !important;
     border: #bbbaba ;
     border-style: solid ;
-    
+    position: relative;
 }
-div.grid-layout div.item a{
+ div.item a{
     color: #000000;
     font-size: 1.25rem;
     font-weight: 600;
     font-family: Exo,sans-serif;
     text-decoration: none;
-    padding: 20px 20px;
+    padding: 10px 20px;
     white-space: wrap;
     display: inline-block;
 }
-div.grid-layout div.item a:hover{
-    color:#ff782d ;
+ div.item a:hover{
+    color:#ff782d !important;
     cursor: pointer;
 }
 div.item:hover{
@@ -363,19 +386,70 @@ div.grid-layout div.item ul{
     gap: 10px;
     align-items: center;
     padding-left: 20px;
+    padding-bottom: 10px;
+}
+div.grid-layout div.item ul i {
+    color: #de610d;
+    padding-right: 0.3rem;
+}
+div.grid-layout div.item ul li.level,li.lessons{
+    display: none !important;
 }
 div.grid-layout div.item img{
     width:100%;
     height: 50%;
     border-radius: 20px 20px 0px 0px;
 }
-div.grid-layout div.item div.artikelText{
-    overflow:hidden; 
-    white-space:wrap; 
-    text-overflow:ellipsis; 
-    width:400px;
-    padding: 20px 20px;
-    font-family: sans-serif;
+ div.item div.h1{
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    gap: 0.2rem;
+}
+ div.item div.h1 span{
+    color: #7b7b7b;
+}
+ div.item div.h1 p{
+    color: #000000;
+}
+ div.coursesFooter {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+div.price{
+    display: flex;
+    padding-left: 20px;
+    gap: 10px;
+}
+div.price p{
+    color: #7b7b7b;
+    text-decoration: line-through;
+}
+div.price span{
+    color: rgb(62, 165, 62);
+    font-weight: bold;
+}
+div.coursesFooter a{
+    font-size: 1rem !important;
+}
+div.coursesFooter a:hover{
+    color: #eb8642;
+}
+ div.coursesTag{
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #fffdfd;
+    padding: 0.3rem 0.3rem;
+    font-family: Exo,sans-serif;
+}
+div.coursesTag:hover{
+    background-color:#c95b12 ;
 }
 /* Líst layout */
 div.list-layout{
@@ -393,6 +467,11 @@ div.list-layout .item {
     border-width: 1px !important;
     border: #bbbaba ;
     border-style: solid ;
+    position: relative;
+}
+div.list-layout div.item-content{
+    display: flex;
+    flex-direction: column;
 }
 div.list-layout div.item-content ul{
     display: flex;
@@ -401,7 +480,16 @@ div.list-layout div.item-content ul{
     padding-left: 20px;
     list-style: none;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
+div.list-layout div.item-content ul li{
+    display: block !important;
+}
+div.list-layout div.item-content ul li i {
+    color: #c95b12;
+    padding-right: 0.2rem;
+}
+
 div.list-layout div.item-content a{
     color: #000000;
     font-size: 1.25rem;
@@ -409,18 +497,7 @@ div.list-layout div.item-content a{
     font-family: Exo,sans-serif;
     text-decoration: none;
     padding: 20px 20px;
-    white-space: nowrap;
-}
-div.list-layout div.item-content a:hover{
-    color:#ff782d ;
-    cursor: pointer;
-}
-div.list-layout div.item-content div.artikelText{
-    /* overflow:hidden;  */
-    white-space:wrap; 
-    text-overflow:ellipsis; 
-    width:400px;
-    padding: 20px 20px;
+    white-space: wrap;
 }
 div.list-layout img{
     width:38%;

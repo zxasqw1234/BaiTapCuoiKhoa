@@ -147,7 +147,10 @@ div.search:hover{
     color: #ff782d;
     border-color: #ff782d;
 }
+div.search:hover i {
+    color: #ff782d;
 
+}
 /* =========================== */
 div.container2{
     position: relative;
@@ -755,6 +758,7 @@ div.site-footer{
     background-color: #F5F5F5;
     padding: 4rem 0rem 1.9rem 0rem; 
     /* align-items: center; */
+    font-family: sans-serif;
 }
 div.site-footer div.footer-logo{
     display: flex;
@@ -811,12 +815,14 @@ footer.copyRight{
     justify-content: center;
     background-color: #F5F5F5;
     border-top: #d3d3d3 solid 1px;
+    font-family: sans-serif;
 }
 footer.copyRight a{
     text-decoration: none;
     color: #111111;
     font-weight: 700;
     font-size: 1.2rem;
+    font-family: sans-serif;
 }
 footer.copyRight a:hover{
     color:#ff782d ;
@@ -833,7 +839,7 @@ footer.copyRight a:hover{
     height: 45px;
     border: none;
     outline: none;
-    background-color: #c8581c;
+    background-color: #000000;
     color: white;
     cursor: pointer;
     /* padding: 15px; */

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn-Register</title>
-    <link rel="stylesheet" href="login.css">
+    <title>BlogListing</title>
+    <link rel="stylesheet" href="error.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
                     <div class="dropdown">
                         <button id="dropdownButton" aria-haspopup="true" aria-expanded="false"> Pages<i class="fa fa-chevron-down" style="font-size:10px"></i></button>
                         <ul id="dropdownMenu" class="dropdown-menu" role="menu" aria-labelledby="dropdownButton">
-                            <li><a href="#home" role="menuitem">About Us</a></li>
+                            <li><a href="./Home.html" role="menuitem">About Us</a></li>
                             <li><a href="#about" role="menuitem">Contact Us</a></li>
                             <li><a href="#services" role="menuitem">FAQs</a></li>
                             <li><a href="#profile" role="menuitem">Profile</a></li>
@@ -58,43 +58,11 @@
         <div class="home-path">
             <a href="https://edupress.thimpress.com/">Home</a>
             <i class="fa-solid fa-chevron-right" style="font-size:10px"></i>
-            <span>Login/Register</span>
+            <span>FAQs</span>
         </div>
-        <div class="container">
-            <div class="Login">
-                <form id="login-form">
-                    <h1>Login</h1>
-                    <input type="text" id="login-username" placeholder="Email or username*" required><br>
-                    <!-- <label for="password">Password:</label> -->
-                    <div class="passwordWrapperLogin">
-                        <input type="password" id="login-password" name="password" placeholder="Password*" required>
-                        <img id="toggle-login-password" src="./eye.png" alt="">
-                    </div>
-                    <input type="checkbox" id="save" name="checkboxSave" >
-                    <label for="save"> Remember me</label>
-                    <br>
-                    <button type="submit">Login</button><br>
-                    <div id="login-error-message" class="error-message"></div>
-                    <a href="#" id="lost-password">Lost your password?</a>
-                </form>
-            </div>
-            <div class="registration">
-                <form id="registration-form">
-                    <h1>Register</h1>
-                    <input type="email" id="email" name="email" placeholder="Email*" required><br>
-                    <input type="text" id="registerUsername" name="name" placeholder="Username*" required>
-                    <div class="passwordWrapper">
-                        <input type="password" id="registerPassword" name="registerPaswword" placeholder="Password*" required>
-                        <img id="toggle-password" src="./eye.png" alt="">
-                    </div>
-                    <div class="passwordWrapperConfirm">
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password*" required>
-                        <img id="toggle-register-password" src="./eye.png" alt="">
-                    </div>
-                    <button type="submit">Register</button>
-                    <p class="register-error-message" id="error"></p>
-                </form>
-            </div>
+        <span class="h1">ERROR</span>
+        <div class="error">
+            <img src="./Screenshot 2024-08-17 055017.png" alt="">
         </div>
     </body>
     <div class="site-footer">
@@ -139,85 +107,8 @@
     <footer class="copyRight">
         <p>Copyright © 2024 LearnPress LMS | Powered by <a href="https://thimpress.com/learnpress/?utm_source=EduPress&amp;utm_medium=HomePage&amp;utm_campaign=Footer" target="_blank" rel="noopener">LearnPress LMS</a></p>
     </footer>
-    <button onclick="scrollToTop()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="scrollToTop()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up" style="color: white;"></i></button>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <script>
-       document.addEventListener('DOMContentLoaded', function () {
-    const registrationForm = document.getElementById('registration-form');
-    const loginForm = document.getElementById('login-form');
-    const errorMessage = document.getElementById('error');
-    const loginErrorMessage = document.getElementById('login-error-message');
-    const togglePasswordButtons = document.querySelectorAll('[id^="toggle-"]');
-        togglePasswordButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const passwordField = button.previousElementSibling;
-            const type = passwordField.type === 'password' ? 'text' : 'password';
-            passwordField.type = type;
-            button.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
-        });
-    });
-    // Register user
-    registrationForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const email = document.getElementById('email').value;
-        const username = document.getElementById('registerUsername').value;
-        const password = document.getElementById('registerPassword').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-
-        const userData = JSON.parse(localStorage.getItem('userData')) || {};
-
-        // Check if passwords match
-        if (password !== confirmPassword) {
-            errorMessage.textContent = 'Passwords do not match.';
-            return;
-        }
-
-        // Check if username or email already exists
-        for (const user in userData) {
-            if (userData[user].email === email || user === username) {
-                errorMessage.textContent = 'Username or Email already exists.';
-                return;
-            }
-        }
-
-        // Store new user data
-        userData[username] = { email: email, password: password };
-        localStorage.setItem('userData', JSON.stringify(userData));
-
-        alert('Registration successful!');
-        registrationForm.reset();
-        errorMessage.textContent = '';
-    });
-
-        // Login user
-        loginForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const identifier = document.getElementById('login-username').value;
-        const password = document.getElementById('login-password').value;
-        const userData = JSON.parse(localStorage.getItem('userData')) || {};
-
-        // Check if the username or email exists and the password matches
-        let loginSuccessful = false;
-        for (const username in userData) {
-            if ((identifier === username || identifier === userData[username].email) && password === userData[username].password) {
-                loginSuccessful = true;
-                break;
-            }
-        }
-
-        if (loginSuccessful) {
-            alert('Login successful!');
-            loginErrorMessage.textContent = '';
-            window.location.href = 'home.html'; // Redirect to home page after successful login
-        } else {
-            loginErrorMessage.textContent = 'Invalid username/email or password.';
-        }
-    });
-});
-
-    </script>
 </body>
 </html>
